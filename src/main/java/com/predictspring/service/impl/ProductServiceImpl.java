@@ -38,9 +38,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public RespBean loadProductFromFile(String path) {
+        FileReader file = null;
         try{
-            File file = new File(path);
-            BufferedReader br = new BufferedReader(new FileReader(file));
+            file = new FileReader(path);
+            BufferedReader br = new BufferedReader(file);
             br.readLine();
             String line = null;
             while ((line = br.readLine()) != null) {
@@ -59,6 +60,14 @@ public class ProductServiceImpl implements ProductService {
             log.info("Error in loading table from path", e);
         }catch (Exception e){
             log.info("Error in add data from line of data",e);
+        }finally {
+            if (file != null){
+                try{
+                    file.close();
+                } catch (IOException e) {
+                    log.info(e.getMessage());
+                }
+            }
         }
         return RespBean.error("failed adding data from " + path);
     }

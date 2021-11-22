@@ -21,16 +21,32 @@ public class SolarSearchController {
     @Autowired
     private SolrClient solrClient;
 
+    @RequestMapping("uploadAll")
+    public RespBean uploadAll(){
+        try{
+            //solrClient.request("http://localhost:8983/solr/dih/dataimport?command=delta-import");
+            SolrQuery params = new SolrQuery();
+            params.setRequestHandler("dataimport");
+            params.set("command", "full-import").set("commit", "true");
+            QueryResponse queryResponse = solrClient.query(params);
+            log.info("Sucessfully update all data into solr from database.");
+            return RespBean.success();
+        }catch (Exception e){
+            log.info("Failed to upload data from database to solr.");
+        }
+        return RespBean.error();
+    }
+
     @RequestMapping("deleteAll")
-    public String deleteAll(){
+    public RespBean deleteAll(){
         try{
             solrClient.deleteByQuery("*:*");
             solrClient.commit();
-            return "Delete Success.";
+            return RespBean.success("Delete Success.");
         }catch (Exception e){
             log.info("Failed to delete documents from solr.", e);
         }
-        return "Error";
+        return RespBean.error("Failed to delete documents from solr.");
     }
 
     @RequestMapping("search")
@@ -38,12 +54,13 @@ public class SolarSearchController {
         try{
             SolrQuery params = new SolrQuery();
             //todo valid solrParam
-            params.set("q", solrParam.getQ().equals("") ? "*:*" : solrParam.getQ());
-            params.set("fq", solrParam.getFq().equals("") ? "" : solrParam.getFq());
-            params.set("sort", solrParam.getSort().equals("") ? "" : solrParam.getSort());
+            params.set("q", solrParam.getQ().equals("") ? "*:*" : solrParam.getQ())
+                    .set("fq", solrParam.getFq().equals("") ? "" : solrParam.getFq())
+                    .set("sort", solrParam.getSort().equals("") ? "" : solrParam.getSort())
+                    .set("fl", solrParam.getFl().equals("") ? "" : solrParam.getFl());
             params.setStart(solrParam.getStart() == 0 ? 0 : solrParam.getStart());
             params.setRows(solrParam.getRow() == 0 ? 10 : solrParam.getRow());
-            params.set("fl", solrParam.getFl().equals("") ? "" : solrParam.getFl());
+
             if (solrParam.isHighlight()){
                 params.setHighlight(true);
                 params.addHighlightField(solrParam.getHighlightField().equals("")? "" : solrParam.getHighlightField());
