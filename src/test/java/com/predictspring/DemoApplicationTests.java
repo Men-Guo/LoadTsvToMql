@@ -1,11 +1,15 @@
 package com.predictspring;
 
 import com.predictspring.controller.SolrSearchController;
+import com.predictspring.entity.Product;
 import com.predictspring.mapper.ProductMapper;
 import com.predictspring.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -27,27 +31,18 @@ class DemoApplicationTests {
     //Product Service test
     @Test
     void addProductServiceSucessTest(){
-
+        Product product = new Product();
+        product.setProductID("666666");
+        int result = productService.addProduct(product);
+        assertEquals(1, result);
     }
 
     @Test
     void addProductServiceFailedTest(){
-
-    }
-
-    @Test
-    void loadProductFromFileByEmptyPath(){
-
-    }
-
-    @Test
-    void loadProductFromFileByWrongPath(){
-
-    }
-
-    @Test
-    void loadProductFromFileByPathSucess(){
-
+        Product product = new Product();
+        product.setProductID(null);
+        int result = productService.addProduct(product);
+        assertEquals(0, result);
     }
 
     @Test
@@ -57,13 +52,13 @@ class DemoApplicationTests {
 
     @Test
     void convertStringToProductFail(){
-
+        //todo
     }
 
     //Product Mapper test
     @Test
     void productMapperInsertMethedSucessTest(){
-
+        //todo
     }
 
     @Test
