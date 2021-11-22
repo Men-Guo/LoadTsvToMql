@@ -4,6 +4,9 @@ import org.apache.solr.client.solrj.beans.Field;
 
 import java.util.Date;
 
+/**
+ * class SolrProduct : get map from SolrDocument to Product
+ */
 public class SolrProduct{
     @Field
     private String ProductID;

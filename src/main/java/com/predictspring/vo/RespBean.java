@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Class record the success and fail status that used by return to api
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

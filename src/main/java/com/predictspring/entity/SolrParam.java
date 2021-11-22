@@ -1,5 +1,8 @@
 package com.predictspring.entity;
 
+/**
+ * SolrParam class from received data from api which can use in query by solr
+ */
 public class SolrParam {
     private String q;
     private String fq;

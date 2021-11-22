@@ -21,6 +21,11 @@ public class SolarSearchController {
     @Autowired
     private SolrClient solrClient;
 
+    /**
+     * API: /solr/uploadALL
+     * The api is upload all data from mysql database, with command = full-import
+     * @return BespBean
+     */
     @RequestMapping("uploadAll")
     public RespBean uploadAll(){
         try{
@@ -37,6 +42,11 @@ public class SolarSearchController {
         return RespBean.error();
     }
 
+    /**
+     * API: /solr/deleteAll
+     * This api is delete all document in solr
+     * @return RespBean sucess/fail
+     */
     @RequestMapping("deleteAll")
     public RespBean deleteAll(){
         try{
@@ -49,6 +59,12 @@ public class SolarSearchController {
         return RespBean.error("Failed to delete documents from solr.");
     }
 
+    /**
+     * Api: /solr/search
+     * Get a Json that map into SolrParam, which is user want to query
+     * @param solrParam - Entity SolrParam
+     * @return RespBean with List of entity.
+     */
     @RequestMapping("search")
     public RespBean search(@RequestBody SolrParam solrParam){
         try{

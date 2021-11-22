@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * ProductExample class from mybatis auto generator
+ */
 public class ProductExample {
     protected String orderByClause;
 

@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Enum for code and message.
+ */
 @Getter
 @ToString
 @AllArgsConstructor

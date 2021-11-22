@@ -20,12 +20,97 @@ class DemoApplicationTests {
     ProductMapper productMapper;
 
     @Test
-    void serivedLoadProductFromFile() {
+    void serivedLoadProductFromFileTest() {
         productService.loadProductFromFile("E:/Product_feed.tsv");
     }
 
+    //Product Service test
     @Test
-    void testDeleteAllDocmentFromSolr(){
+    void addProductServiceSucessTest(){
+
+    }
+
+    @Test
+    void addProductServiceFailedTest(){
+
+    }
+
+    @Test
+    void loadProductFromFileByEmptyPath(){
+
+    }
+
+    @Test
+    void loadProductFromFileByWrongPath(){
+
+    }
+
+    @Test
+    void loadProductFromFileByPathSucess(){
+
+    }
+
+    @Test
+    void convertStringToProductSuccess(){
+
+    }
+
+    @Test
+    void convertStringToProductFail(){
+
+    }
+
+    //Product Mapper test
+    @Test
+    void productMapperInsertMethedSucessTest(){
+
+    }
+
+    @Test
+    void productMapperInsertMethedFailedTest(){
+
+    }
+
+    @Test
+    void productMapperInsertSelectiveMethodSucessTest(){
+
+    }
+
+    @Test
+    void productMapperInsertSelectiveMethodFailedTest(){
+
+    }
+
+    @Test
+    void testDeleteAllDocmentFromSolrTest(){
         solarSearchController.deleteAll();
     }
+
+    //validator
+    @Test
+    void testValidatePriceSuccess(){
+
+    }
+
+    @Test
+    void testValidatePriceEmpty(){
+
+    }
+
+    @Test
+    void testValidatePriceNull(){
+
+    }
+
+    @Test
+    void testValidateInputStringSucess(){
+
+    }
+
+    @Test
+    void testValidateInputStringfail(){
+
+    }
+
+
 }

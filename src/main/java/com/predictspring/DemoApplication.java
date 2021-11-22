@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * main start for whole project
+ */
 @SpringBootApplication
 @EnableScheduling
 @MapperScan(basePackages = "com.predictspring.mapper")

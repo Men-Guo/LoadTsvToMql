@@ -25,6 +25,11 @@ public class ProductServiceImpl implements ProductService {
     @Resource
     ProductMapper productMapper;
 
+    /**
+     * Add a data into database
+     * @param product - entity
+     * @return int 1 : success. 0 : failed
+     */
     @Override
     public int addProduct(Product product) {
         try {
@@ -35,6 +40,11 @@ public class ProductServiceImpl implements ProductService {
         return 0;
     }
 
+    /**
+     * Load data from path, convert data to entity and save them into database.
+     * @param path - String
+     * @return RespBean success : failed.
+     */
     @Override
     @Transactional
     public RespBean loadProductFromFile(String path) {
@@ -72,7 +82,11 @@ public class ProductServiceImpl implements ProductService {
         return RespBean.error("failed adding data from " + path);
     }
 
-
+    /**
+     * Convert a line of data to product entity
+     * @param line - String
+     * @return Product
+     */
     public Product convertStringToProduct(String line){
 
         //Validate line data
