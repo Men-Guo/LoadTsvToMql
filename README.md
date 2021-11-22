@@ -1,5 +1,6 @@
 #1. Introduction
-  ##1.1 Project Goals
+
+##1.1 Project Goals
 <br>Project goals include:</br>   
 <br>1. Load Provided Product File using JAVA into MysQL DataBase </br>  
 <br>2. Setup Apache SOLR instance</br>
