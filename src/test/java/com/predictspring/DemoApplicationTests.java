@@ -1,6 +1,6 @@
 package com.predictspring;
 
-import com.predictspring.controller.SolarSearchController;
+import com.predictspring.controller.SolrSearchController;
 import com.predictspring.mapper.ProductMapper;
 import com.predictspring.service.ProductService;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 
     @Autowired
-    SolarSearchController solarSearchController;
+    SolrSearchController solrSearchController;
 
     @Autowired
     ProductService productService;
@@ -83,7 +83,7 @@ class DemoApplicationTests {
 
     @Test
     void testDeleteAllDocmentFromSolrTest(){
-        solarSearchController.deleteAll();
+        solrSearchController.deleteAll();
     }
 
     //validator
