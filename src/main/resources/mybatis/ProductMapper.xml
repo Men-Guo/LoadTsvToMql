@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.predictspring.mapper.ProductMapper">
+  <insert id="insert" parameterType="com.predictspring.entity.Product">
+    insert into product (ProductID, Name, GoogleCategory, 
+      ProductURL, ImageURL, AdditionalImageURL, 
+      ProductCondition, Price, SalesPrice, 
+      Brand, Manufacturer, ManufacturerLocation, 
+      GTIN, MPN, Gender, 
+      AgeRangeLow, AgeRangeHigh, VariantGroupID, 
+      Color, Size, Material, 
+      Pattern, Shipping, ShippingWeight, 
+      Bundle, MerchantSKU, TopSellerRank, 
+      Tax, ChannelApplicability, InternalProductID, 
+      PromotionID, IsDefaultVariant, ProcessingTime, 
+      Customization, LastUpdate, Active, 
+      AgeGroup, Availability, IsOnSale, 
+      CurrencyCode, PromotionEnd, PromotionStart, 
+      PromotionTitle, ColorSwatchUrl, ProductLocation, 
+      SalePriceStart, SalePriceEnd, SizeGuideURL, 
+      SearchImageURL, Description, MerchantCategory, 
+      ManufacturerDetails, PromotionsMetadata
+      )
+    values (#{productID,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{googleCategory,jdbcType=VARCHAR}, 
+      #{productURL,jdbcType=VARCHAR}, #{imageURL,jdbcType=VARCHAR}, #{additionalImageURL,jdbcType=VARCHAR}, 
+      #{productCondition,jdbcType=CHAR}, #{price,jdbcType=DECIMAL}, #{salesPrice,jdbcType=DECIMAL}, 
+      #{brand,jdbcType=VARCHAR}, #{manufacturer,jdbcType=VARCHAR}, #{manufacturerLocation,jdbcType=VARCHAR}, 
+      #{GTIN,jdbcType=VARCHAR}, #{MPN,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, 
+      #{ageRangeLow,jdbcType=INTEGER}, #{ageRangeHigh,jdbcType=INTEGER}, #{variantGroupID,jdbcType=VARCHAR}, 
+      #{color,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, #{material,jdbcType=VARCHAR}, 
+      #{pattern,jdbcType=VARCHAR}, #{shipping,jdbcType=VARCHAR}, #{shippingWeight,jdbcType=VARCHAR}, 
+      #{bundle,jdbcType=VARCHAR}, #{merchantSKU,jdbcType=VARCHAR}, #{topSellerRank,jdbcType=INTEGER}, 
+      #{tax,jdbcType=VARCHAR}, #{channelApplicability,jdbcType=CHAR}, #{internalProductID,jdbcType=VARCHAR}, 
+      #{promotionID,jdbcType=VARCHAR}, #{isDefaultVariant,jdbcType=BIT}, #{processingTime,jdbcType=VARCHAR}, 
+      #{customization,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}, #{active,jdbcType=TINYINT}, 
+      #{ageGroup,jdbcType=VARCHAR}, #{availability,jdbcType=VARCHAR}, #{isOnSale,jdbcType=BIT}, 
+      #{currencyCode,jdbcType=CHAR}, #{promotionEnd,jdbcType=TIMESTAMP}, #{promotionStart,jdbcType=TIMESTAMP}, 
+      #{promotionTitle,jdbcType=VARCHAR}, #{colorSwatchUrl,jdbcType=VARCHAR}, #{productLocation,jdbcType=CHAR}, 
+      #{salePriceStart,jdbcType=TIMESTAMP}, #{salePriceEnd,jdbcType=TIMESTAMP}, #{sizeGuideURL,jdbcType=VARCHAR}, 
+      #{searchImageURL,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}, #{merchantCategory,jdbcType=LONGVARCHAR}, 
+      #{manufacturerDetails,jdbcType=LONGVARCHAR}, #{promotionsMetadata,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.predictspring.entity.Product">
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="productID != null">
+        ProductID,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="googleCategory != null">
+        GoogleCategory,
+      </if>
+      <if test="productURL != null">
+        ProductURL,
+      </if>
+      <if test="imageURL != null">
+        ImageURL,
+      </if>
+      <if test="additionalImageURL != null">
+        AdditionalImageURL,
+      </if>
+      <if test="productCondition != null">
+        ProductCondition,
+      </if>
+      <if test="price != null">
+        Price,
+      </if>
+      <if test="salesPrice != null">
+        SalesPrice,
+      </if>
+      <if test="brand != null">
+        Brand,
+      </if>
+      <if test="manufacturer != null">
+        Manufacturer,
+      </if>
+      <if test="manufacturerLocation != null">
+        ManufacturerLocation,
+      </if>
+      <if test="GTIN != null">
+        GTIN,
+      </if>
+      <if test="MPN != null">
+        MPN,
+      </if>
+      <if test="gender != null">
+        Gender,
+      </if>
+      <if test="ageRangeLow != null">
+        AgeRangeLow,
+      </if>
+      <if test="ageRangeHigh != null">
+        AgeRangeHigh,
+      </if>
+      <if test="variantGroupID != null">
+        VariantGroupID,
+      </if>
+      <if test="color != null">
+        Color,
+      </if>
+      <if test="size != null">
+        Size,
+      </if>
+      <if test="material != null">
+        Material,
+      </if>
+      <if test="pattern != null">
+        Pattern,
+      </if>
+      <if test="shipping != null">
+        Shipping,
+      </if>
+      <if test="shippingWeight != null">
+        ShippingWeight,
+      </if>
+      <if test="bundle != null">
+        Bundle,
+      </if>
+      <if test="merchantSKU != null">
+        MerchantSKU,
+      </if>
+      <if test="topSellerRank != null">
+        TopSellerRank,
+      </if>
+      <if test="tax != null">
+        Tax,
+      </if>
+      <if test="channelApplicability != null">
+        ChannelApplicability,
+      </if>
+      <if test="internalProductID != null">
+        InternalProductID,
+      </if>
+      <if test="promotionID != null">
+        PromotionID,
+      </if>
+      <if test="isDefaultVariant != null">
+        IsDefaultVariant,
+      </if>
+      <if test="processingTime != null">
+        ProcessingTime,
+      </if>
+      <if test="customization != null">
+        Customization,
+      </if>
+      <if test="lastUpdate != null">
+        LastUpdate,
+      </if>
+      <if test="active != null">
+        Active,
+      </if>
+      <if test="ageGroup != null">
+        AgeGroup,
+      </if>
+      <if test="availability != null">
+        Availability,
+      </if>
+      <if test="isOnSale != null">
+        IsOnSale,
+      </if>
+      <if test="currencyCode != null">
+        CurrencyCode,
+      </if>
+      <if test="promotionEnd != null">
+        PromotionEnd,
+      </if>
+      <if test="promotionStart != null">
+        PromotionStart,
+      </if>
+      <if test="promotionTitle != null">
+        PromotionTitle,
+      </if>
+      <if test="colorSwatchUrl != null">
+        ColorSwatchUrl,
+      </if>
+      <if test="productLocation != null">
+        ProductLocation,
+      </if>
+      <if test="salePriceStart != null">
+        SalePriceStart,
+      </if>
+      <if test="salePriceEnd != null">
+        SalePriceEnd,
+      </if>
+      <if test="sizeGuideURL != null">
+        SizeGuideURL,
+      </if>
+      <if test="searchImageURL != null">
+        SearchImageURL,
+      </if>
+      <if test="description != null">
+        Description,
+      </if>
+      <if test="merchantCategory != null">
+        MerchantCategory,
+      </if>
+      <if test="manufacturerDetails != null">
+        ManufacturerDetails,
+      </if>
+      <if test="promotionsMetadata != null">
+        PromotionsMetadata,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="productID != null">
+        #{productID,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="googleCategory != null">
+        #{googleCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="productURL != null">
+        #{productURL,jdbcType=VARCHAR},
+      </if>
+      <if test="imageURL != null">
+        #{imageURL,jdbcType=VARCHAR},
+      </if>
+      <if test="additionalImageURL != null">
+        #{additionalImageURL,jdbcType=VARCHAR},
+      </if>
+      <if test="productCondition != null">
+        #{productCondition,jdbcType=CHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="salesPrice != null">
+        #{salesPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="brand != null">
+        #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacturer != null">
+        #{manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacturerLocation != null">
+        #{manufacturerLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="GTIN != null">
+        #{GTIN,jdbcType=VARCHAR},
+      </if>
+      <if test="MPN != null">
+        #{MPN,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="ageRangeLow != null">
+        #{ageRangeLow,jdbcType=INTEGER},
+      </if>
+      <if test="ageRangeHigh != null">
+        #{ageRangeHigh,jdbcType=INTEGER},
+      </if>
+      <if test="variantGroupID != null">
+        #{variantGroupID,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null">
+        #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null">
+        #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="pattern != null">
+        #{pattern,jdbcType=VARCHAR},
+      </if>
+      <if test="shipping != null">
+        #{shipping,jdbcType=VARCHAR},
+      </if>
+      <if test="shippingWeight != null">
+        #{shippingWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="bundle != null">
+        #{bundle,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantSKU != null">
+        #{merchantSKU,jdbcType=VARCHAR},
+      </if>
+      <if test="topSellerRank != null">
+        #{topSellerRank,jdbcType=INTEGER},
+      </if>
+      <if test="tax != null">
+        #{tax,jdbcType=VARCHAR},
+      </if>
+      <if test="channelApplicability != null">
+        #{channelApplicability,jdbcType=CHAR},
+      </if>
+      <if test="internalProductID != null">
+        #{internalProductID,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionID != null">
+        #{promotionID,jdbcType=VARCHAR},
+      </if>
+      <if test="isDefaultVariant != null">
+        #{isDefaultVariant,jdbcType=BIT},
+      </if>
+      <if test="processingTime != null">
+        #{processingTime,jdbcType=VARCHAR},
+      </if>
+      <if test="customization != null">
+        #{customization,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdate != null">
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="active != null">
+        #{active,jdbcType=TINYINT},
+      </if>
+      <if test="ageGroup != null">
+        #{ageGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="availability != null">
+        #{availability,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnSale != null">
+        #{isOnSale,jdbcType=BIT},
+      </if>
+      <if test="currencyCode != null">
+        #{currencyCode,jdbcType=CHAR},
+      </if>
+      <if test="promotionEnd != null">
+        #{promotionEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="promotionStart != null">
+        #{promotionStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="promotionTitle != null">
+        #{promotionTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="colorSwatchUrl != null">
+        #{colorSwatchUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="productLocation != null">
+        #{productLocation,jdbcType=CHAR},
+      </if>
+      <if test="salePriceStart != null">
+        #{salePriceStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="salePriceEnd != null">
+        #{salePriceEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sizeGuideURL != null">
+        #{sizeGuideURL,jdbcType=VARCHAR},
+      </if>
+      <if test="searchImageURL != null">
+        #{searchImageURL,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="merchantCategory != null">
+        #{merchantCategory,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="manufacturerDetails != null">
+        #{manufacturerDetails,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="promotionsMetadata != null">
+        #{promotionsMetadata,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -1,0 +1,33 @@
+2021-11-21 19:14:44.533  INFO 1032 --- [main] com.predictspring.DemoApplication        : Starting DemoApplication using Java 1.8.0_281 on DESKTOP-G196L55 with PID 1032 (E:\predictspringOA\target\classes started by 93444 in E:\predictspringOA)
+2021-11-21 19:14:44.535  INFO 1032 --- [main] com.predictspring.DemoApplication        : No active profile set, falling back to default profiles: default
+2021-11-21 19:14:45.354  WARN 1032 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'productMapper' and 'com.predictspring.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2021-11-21 19:14:45.355  WARN 1032 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.predictspring.mapper]' package. Please check your configuration.
+2021-11-21 19:14:45.856  INFO 1032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-21 19:14:45.869  INFO 1032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-21 19:14:45.869  INFO 1032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-21 19:14:46.000  INFO 1032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-21 19:14:46.001  INFO 1032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1415 ms
+2021-11-21 19:14:47.583  INFO 1032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-21 19:14:47.595  INFO 1032 --- [main] com.predictspring.DemoApplication        : Started DemoApplication in 3.545 seconds (JVM running for 4.763)
+2021-11-21 19:15:15.005  INFO 8788 --- [main] com.predictspring.DemoApplication        : Starting DemoApplication using Java 1.8.0_281 on DESKTOP-G196L55 with PID 8788 (E:\predictspringOA\target\classes started by 93444 in E:\predictspringOA)
+2021-11-21 19:15:15.008  INFO 8788 --- [main] com.predictspring.DemoApplication        : No active profile set, falling back to default profiles: default
+2021-11-21 19:15:15.864  WARN 8788 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'productMapper' and 'com.predictspring.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2021-11-21 19:15:15.865  WARN 8788 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.predictspring.mapper]' package. Please check your configuration.
+2021-11-21 19:15:16.330  INFO 8788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-21 19:15:16.344  INFO 8788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-21 19:15:16.344  INFO 8788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-21 19:15:16.472  INFO 8788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-21 19:15:16.472  INFO 8788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1413 ms
+2021-11-21 19:15:17.969  INFO 8788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-21 19:15:17.981  INFO 8788 --- [main] com.predictspring.DemoApplication        : Started DemoApplication in 3.603 seconds (JVM running for 4.851)
+2021-11-21 19:16:04.702  INFO 8544 --- [main] com.predictspring.DemoApplication        : Starting DemoApplication using Java 1.8.0_281 on DESKTOP-G196L55 with PID 8544 (E:\predictspringOA\target\classes started by 93444 in E:\predictspringOA)
+2021-11-21 19:16:04.704  INFO 8544 --- [main] com.predictspring.DemoApplication        : No active profile set, falling back to default profiles: default
+2021-11-21 19:16:05.479  WARN 8544 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'productMapper' and 'com.predictspring.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2021-11-21 19:16:05.479  WARN 8544 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.predictspring.mapper]' package. Please check your configuration.
+2021-11-21 19:16:05.938  INFO 8544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-21 19:16:05.952  INFO 8544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-21 19:16:05.952  INFO 8544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-21 19:16:06.086  INFO 8544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-21 19:16:06.086  INFO 8544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1331 ms
+2021-11-21 19:16:07.585  INFO 8544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-21 19:16:07.604  INFO 8544 --- [main] com.predictspring.DemoApplication        : Started DemoApplication in 3.365 seconds (JVM running for 4.57)
